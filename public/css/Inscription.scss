@@ -1,0 +1,47 @@
+@import "variables.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "propreties.scss";
+form {
+  width: 50%;
+  margin: 0 auto;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  padding: 4%;
+  margin-top: 8%;
+  margin-bottom: 2%;
+  label {
+    font-size: $font-size4;
+    font-family: $font;
+    color: $color1;
+    margin-right: 10px;
+  }
+  input {
+    border: none;
+    border-bottom: 1px solid $color5;
+    font-size: $font-size1;
+    font-family: $font;
+    margin-bottom: 4%;
+    &:focus {
+      outline: none;
+    }
+  }
+  .button {
+    padding: 2% 7%;
+    border: none;
+    background-color: $color1;
+    color: $color2;
+    border-radius: 80px;
+    transition: all 0.5s ease-in;
+  }
+  .button:hover {
+    @include hover2;
+    @include hover;
+  }
+}
+
+.fle-part1 {
+  @include flex;
+  & > div {
+    width: 50%;
+  }
+}

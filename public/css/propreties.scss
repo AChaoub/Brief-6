@@ -1,0 +1,43 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+@mixin font {
+  font-size: $font-size1;
+  font-family: $font;
+}
+@mixin click {
+  text-decoration: none;
+  color: $color2;
+  padding: 0px 40px 0px 15px;
+  font-weight: $font-weight1;
+}
+@mixin boxes {
+  display: flex;
+  justify-content: center;
+  padding-top: 20%;
+  font-family: $font;
+  font-size: $font-size3;
+  font-weight: $font-weight2;
+}
+@mixin box {
+  width: 200px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  margin-left: 3%;
+  padding: 1% 2%;
+  transition: all 0.5s ease-in;
+}
+@mixin hover {
+  color: $color3;
+  transition: 1s all ease-in;
+}
+@mixin hover2 {
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  transition: all 0.5s ease-in;
+}
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+}

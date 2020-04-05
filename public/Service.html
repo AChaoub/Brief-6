@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="./css/Service.css">
+        
+
+    </head>
+
+    <body>
+        <!-- <nav class="navbar">
+            <div class="Logo">
+                <div>
+                    <img src="./images/Logo.png" alt="" width="19%">
+                </div>
+                <div class="Info mr-1">
+                    <div>
+                        <p> Rue Idriss I, B.P 55, Plateau Safi</p>
+                    </div>
+                    <div>
+                        <input type="text" name="text" id="text">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div>
+                        <span>English</span>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="Menu">
+                <ul class="list">
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="#">Inscription</a></li>
+                    <li><a href="#">Départements</a></li>
+                </ul>
+                <p class="mr-1 contact"><span>CONTACTEZ-NOUS:</span>Tél : 0524.63.07.45 // Fax : 0524.63.08.99</p>
+            </div>
+        </nav> -->
+        <nav class="navbar">
+            <div class="Logo">
+                <div>
+                    <img src="images/Logo.png" alt="" width="19%">
+                </div>
+                <div class="Info">
+                    <div>
+                        <p> Rue Idriss I, B.P 55, Plateau Safi</p>
+                    </div>
+                    <div>
+                        <input type="text" name="text" id="text">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div>
+                        <span>English</span>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="Menu">
+                <ul class="list">
+                    <li><a href="/">Acceuil</a></li>
+                    <li><a href="/inscription">Inscription</a></li>
+                    <li><a href="#">Départements</a></li>
+                </ul>
+                <p class="contact"><span>CONTACTEZ-NOUS:</span>Tél : 0524.63.07.45 // Fax : 0524.63.08.99</p>
+            </div>
+        </nav>
+        <!--  -->
+        <br><br>
+        <div id="body">
+            <section class="site-section" id="services-section">
+                <div class="container" id="container-id">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-md-8 text-center aos-init aos-animate " data-aos="fade-up">
+                            <h2 class="text-black h1 site-section-heading text-center Z-question ">Nos Services
+                                <div class="slach"></div>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row align-items-stretch" id="servicesCont">
+                        <!-- REMPLISSAGE AUTOMATIQUE DES DONNES SERVICE "JSON" -->
+                        <!-- Partie zone + "ajouter service à l'interface"  -->
+                         <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500" id="addServiceDIV">
+                            <div class="unit-4 d-flex ajt-img" >
+                                <div class="unit-4-icon mr-4" ><span class="text-primary icon-phonelink"></span></div>
+                                <div>
+                                    <img src="images/add.svg" class="icn-ajt" alt="">
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </section><br>
+            <div class="questions zone-ajout-srv">
+                <div class="questions-child">
+                    <div class="ajouter-service">
+                        <h2 class="text-black h1 site-section-heading text-center Z-question"  >Zone Service
+                            <div class="slach"></div>
+                        </h2><br><br>
+                        <form action="/stockerService" method="POST">
+                            <div class="service">
+                                <p class="txt">Nom de nouveau service:</p>
+                                <input id="txt1" type="text" value="" name="NomS"></input>
+                                <p class="txt">Descripton:</p>
+                                <textarea id="txt2" type="text" value="" name="DesS"></textarea>
+                                <button type="submit" class="btn btn-outline-primary btn-rounded waves-effect" >AJOUTER</button>
+                                <button type="button" id="FermerZoneS" class="btn btn-outline-danger btn-rounded waves-effect" onclick="masquerZone()" >FERMER</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="questions"  >
+                <div class="questions-child">
+                    <div class="blank"></div>
+                    <div class="question-service">
+                        <form action="/stocker" method="POST">
+                            <h2 class="text-black h1 site-section-heading text-center Z-question">Zone Questions
+                                <div class="slach"></div>
+                            </h2><br><br>
+                            <label class="mdb-main-label txt">Services:</label>
+                            <select class="browser-default custom-select" name="ConBox" id="choixSer">
+                                <option value="0" disabled selected>Choisi un service </option>
+                            </select>
+                            <div id="Description" class="txt">
+                            </div><br>
+                            <div class="form-group blue-border-focus">
+                                <label for="exampleFormControlTextarea5" class="txt">Saisir votre Question : </label>
+                                <textarea class="form-control ZonTxt" id="exampleFormControlTextarea5" name="textZone" rows="3" ></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-outline-primary btn-rounded waves-effect" onclick="btnEnvoyer()">Envoyer</button>
+                            <button type="button" class="btn btn-outline-primary btn-rounded waves-effect" id="Vider">Effacer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        <footer>
+            <div><img src="" alt="">
+                <p>Agence Urbaine SAFI-YOUSSOUFIA</p>
+                <div>
+                    <a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div>
+                <h2>RESOURCES</h2>
+                <ul>
+                    <li><a href="#">- Conditions Générales d’Utilisation</a></li>
+                    <li><a href="#">- Appels d’offres</a></li>
+                    <li><a href="#">- Recrutement</a></li>
+                    <li><a href="#">- Bilans & Statistiques</a></li>
+                    <li><a href="#">- Revue de presse</a></li>
+                </ul>
+            </div>
+            <div class="container2">
+                <div class="part3">
+                    <span class="part3-1">Adresse:</span>
+                    <span class="dotted"></span>
+                    <span class="part3-2">Rue Idriss I, B.P 55, Plateau Safi</span>
+                </div>
+                <div class="part3">
+                    <span class="part3-1">Télephone:</span>
+                    <span class="dotted"></span>
+                    <span class="part3-2">0524.63.07.45 </span>
+                </div>
+                <div class="part3">
+                    <span class="part3-1">Fax:</span>
+                    <span class="dotted"></span>
+                    <span class="part3-2">0524.63.08.99 </span>
+                </div>
+    
+                <div class="part3">
+                    <span class="part3-1">Email:</span>
+                    <span class="dotted"></span>
+                    <span class="part3-2">contact@ausy.ma</span>
+                </div>
+            </div>
+        </footer>
+    
+
+    </body>
+    <script src="./js/ServicesJs.js"></script>
+</html>

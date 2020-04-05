@@ -1,0 +1,16 @@
+{
+  "name": "Inscription",
+  "version": "1.0.0",
+  "description": "",
+  "main": "inscription.js",
+  "scripts": {
+    "start": "nodemon inscription.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express-handlebars": "^4.0.2",
+    "nodemon": "^2.0.2"
+  }
+}
