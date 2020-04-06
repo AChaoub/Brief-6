@@ -1,11 +1,5 @@
 @import "variables.scss";
 @import "header.scss";
-@import "footer.scss";
-
-body {
-  margin: 0;
-  padding: 0;
-}
 
 .part1 {
   display: flex;
@@ -87,12 +81,13 @@ body {
 }
 
 .boxes2.boxes3 {
-  padding: 50px 0;
+  padding: 50px 25px;
 }
 
 .fle {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   font-family: $font;
   margin-top: 4%;
   padding: 0 50px;
@@ -108,8 +103,7 @@ body {
   }
 
   .content-area {
-    flex-basis: 50%;
-    padding-left: 50px;
+    flex-basis: 45%;
   }
 
   .title {
@@ -163,6 +157,7 @@ body {
   @include flex;
   background-color: $color5;
   font-family: $font;
+  padding: 0 50px;
   div {
     width: 50%;
     h2 {
@@ -177,9 +172,6 @@ body {
       color: $color2;
       padding: 2%;
     }
-  }
-  .partie1 {
-    margin-left: 7%;
   }
   .partie2 {
     ul {
@@ -203,3 +195,5 @@ body {
     }
   }
 }
+
+@import "footer.scss";

@@ -1,7 +1,6 @@
 @import "variables.scss";
 @import "propreties.scss";
 footer {
-  height: 80%;
   background-color: $color1;
   // margin-top: 2%;
   @include flex;
@@ -59,6 +58,92 @@ footer {
       flex: 1;
       height: 10px;
       border-bottom: 2px dotted $color3;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  footer {
+    & > div {
+      width: 100%;
+      padding: 15px 25px!important;
+      margin: 0!important
+    }
+    
+    h2 {
+      margin: 0;
+    }
+
+    ul {
+      padding: 0
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .contact-details {
+    display: none;
+  }
+  .Image {
+    height: auto;
+    .boxes .box {
+      width: 40%;
+      margin-bottom: 25px;
+    }
+  }
+  .boxes2 .box3 {
+    width: 40%;
+    margin-bottom: 25px;
+  }
+
+  .part1 {
+    padding: 0 25px;
+    margin: 0;
+    flex-wrap: wrap;
+    .part1-1 {
+      margin: 0;
+      .slider {
+        width: 100%;
+      }
+    }
+  }
+
+  .fle {
+    padding: 25px;
+    margin: 0;
+
+    .container {
+      width: 48%;
+      margin-bottom: 25px;
+    }
+
+    .img-area, .content-area {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      margin: 0;
+      padding: 0
+    }
+  }
+
+  .backgr {
+    padding: 0 25px;
+    & > div {
+      width: 100%;
+    }
+  }   
+}
+
+@media all and (max-width: 425px) {
+  .fle .container, .Image .boxes .box, .boxes2 .box3 {
+    width: 100%;
+  }
+  .navbar .Logo {
+    .Info {
+      display: none;
+    }
+    .logo-img {
+      width: 100%;
+      text-align: center;
     }
   }
 }

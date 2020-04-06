@@ -2,158 +2,136 @@ body {
   padding: 0;
   margin: 0;
 }
+
 /* header -------------------------------------- */
-.navbar {
+
+.header {
   background-color: #004767;
-  height:   auto;
   font-family: Montserrat, sans serif;
   color: white;
   font-size: 14px;
 }
 
-.navbar .Logo {
+.header .Logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 25px;
 }
 
-.navbar .Logo .Info {
+.header .Logo .logo-img {
+  width: 15%;
+}
+
+.header .Logo .logo-img img {
+  height: 80px;
+}
+
+.header .Logo .Info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 170px;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.navbar .Logo .Info div {
+.header .Logo .Info p {
+  margin: 0
+}
+
+.header .Logo .Info div {
   margin-right: 18px;
 }
 
-.navbar .line {
+.header .line {
   background-color: #03bfcb;
   width: 100%;
   height: 1px;
 }
 
-.navbar .Menu {
+.header .Menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-.navbar .Menu .list {
+.header .Menu .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  padding: 0 25px;
+  margin-top: 1rem;
 }
 
-.navbar .Menu .list a {
+.header .Menu .list a {
   text-decoration: none;
   color: white;
-  padding: 0px 40px 0px 15px;
+  padding: 0px 15px;
   font-weight: 500;
 }
 
-.navbar .Menu .list a:hover {
+.header .Menu .list a:hover {
   color: #03bfcb;
   -webkit-transition: 1s all ease-in;
   transition: 1s all ease-in;
 }
 
-.navbar .Menu p {
+.header .Menu p {
   margin-right: 2%;
+  margin-top: 1rem;
 }
 
-.navbar .Menu p span {
+.header .Menu p span {
   color: #03bfcb;
   font-weight: 500;
 }
 
-.Image {
-  background-image: url(../Html/safi-at-night.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 400px;
-}
-
-.Image .boxes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 20%;
-  font-family: Montserrat, sans serif;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.Image .boxes .box {
-  width: 200px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-  background-color: white;
-  margin-left: 3%;
-  padding: 1% 2%;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-}
-
-.Image .boxes .box i {
-  font-size: 37px;
-  color: #03bfcb;
-  margin-top: 5%;
-}
-
-.Image .boxes .box a {
-  text-decoration: none;
-  color: #004767;
-}
-
-.Image .boxes .box p {
-  margin-top: 30%;
-}
-
-.Image .box:hover {
-  -webkit-box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-}
-.contact{
+.contact {
   width: 440px;
   margin-left: 353px;
 }
 
+@media all and (max-width: 768px) {
+  .contact-details {
+    display: none;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .header .Logo .Info {
+    display: none;
+  }
+  .header .Logo .logo-img {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* /Header ----------------------------------- */
 
-
-
 /* Service.css ---------------------------------- */
-#Description{
-  height:auto;
-  font-family: 'Montserrat', sans-serif;
 
+#Description {
+  height: auto;
+  font-family: 'Montserrat', sans-serif;
 }
-#Description >p{
-  color : black;
+
+#Description>p {
+  color: black;
   font-size: 12px;
   margin-left: 6%;
   font-family: 'Montserrat', sans-serif;
 }
-#spanDes{
+
+#spanDes {
   font-size: 20px;
 }
 
@@ -186,8 +164,7 @@ body {
   margin: auto;
 }
 
-.ajouter-service,
-.question-service {
+.ajouter-service, .question-service {
   margin: 10px 0px;
 }
 
@@ -200,7 +177,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #404d60;
 }
-.descrS{
+
+.descrS {
   /* font-size: 15px;
   font-family: 'Montserrat', sans-serif; */
   font-size: 15px;
@@ -208,115 +186,84 @@ body {
   line-height: 25px;
   font-weight: 500;
 }
-.h  {
+
+.h {
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   color: #004767;
 }
-.p{
+
+.p {
   font-family: 'Montserrat', sans-serif;
 }
+
 .service {
   display: flex;
   flex-direction: column;
 }
 
-.btn-outline-primary{
+.btn-outline-primary {
   margin: 10px 0px;
 }
 
-.ajt-img{
+.ajt-img {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.icn-ajt{
+
+.icn-ajt {
   height: 70px;
 }
 
-
-.txt{
+.txt {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-
 }
+
 @media only screen and (max-width: 1200px) {
   .ourservice {
     max-width: 45%;
   }
-  .descrS{
+  .descrS {
     font-size: 14px;
   }
 }
+
 @media only screen and (max-width: 800px) {
   .ourservice {
     max-width: 70%;
     margin-left: 15%;
   }
-  #Description >p{
-    font-size: 12px;
-    
-  }
-  .descrS{
+  #Description>p {
     font-size: 12px;
   }
-  
+  .descrS {
+    font-size: 12px;
+  }
 }
+
 @media only screen and (max-width: 600px) {
   .ourservice {
     flex-direction: row;
   }
-  #Description >p{
+  #Description>p {
     font-size: 11px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Footer------------------------------- */
 
 footer {
-  height: 80%;
   background-color: #004767;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 footer p {
@@ -329,7 +276,7 @@ footer p {
 footer a {
   text-decoration: none;
   color: white;
-  padding: 0px 40px 0px 15px;
+  padding: 0px 15px;
   font-weight: 500;
   font-size: 20px;
 }
@@ -349,7 +296,7 @@ footer li {
 footer li a {
   text-decoration: none;
   color: white;
-  padding: 0px 40px 0px 15px;
+  padding: 0px 15px;
   font-weight: 500;
   line-height: 30px;
   font-family: Montserrat, sans serif;
@@ -363,11 +310,11 @@ footer .container2 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 3%;
   margin-right: 2%;
 }
@@ -377,11 +324,11 @@ footer .container2 .part3 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.11);
   padding: 3%;
@@ -401,10 +348,24 @@ footer .container2 .part3 .part3-2 {
 
 footer .container2 .dotted {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   height: 10px;
   border-bottom: 2px dotted #03bfcb;
 }
-/* /Footer-------------------------------------------- */
 
+@media all and (max-width: 768px) {
+  footer>div {
+    width: 100%;
+    padding: 15px 25px !important;
+    margin: 0 !important;
+  }
+  footer h2 {
+    margin: 0;
+  }
+  footer ul {
+    padding: 0;
+  }
+}
+
+/* /Footer-------------------------------------------- */

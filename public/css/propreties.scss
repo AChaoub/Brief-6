@@ -9,22 +9,23 @@ body {
 @mixin click {
   text-decoration: none;
   color: $color2;
-  padding: 0px 40px 0px 15px;
+  padding: 0px 15px;
   font-weight: $font-weight1;
 }
 @mixin boxes {
   display: flex;
   justify-content: center;
-  padding-top: 20%;
+  flex-wrap: wrap;
+  padding: 20% 25px 0;
   font-family: $font;
   font-size: $font-size3;
   font-weight: $font-weight2;
 }
 @mixin box {
-  width: 200px;
+  width: 20%;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   background-color: white;
-  margin-left: 3%;
+  margin: 0 2%;
   padding: 1% 2%;
   transition: all 0.5s ease-in;
 }
@@ -40,4 +41,5 @@ body {
 @mixin flex {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }

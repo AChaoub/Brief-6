@@ -4,7 +4,6 @@ body {
 }
 
 footer {
-  height: 80%;
   background-color: #004767;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,6 +11,8 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 footer p {
@@ -24,7 +25,7 @@ footer p {
 footer a {
   text-decoration: none;
   color: white;
-  padding: 0px 40px 0px 15px;
+  padding: 0px 15px;
   font-weight: 500;
   font-size: 20px;
 }
@@ -44,7 +45,7 @@ footer li {
 footer li a {
   text-decoration: none;
   color: white;
-  padding: 0px 40px 0px 15px;
+  padding: 0px 15px;
   font-weight: 500;
   line-height: 30px;
   font-family: Montserrat, sans serif;
@@ -100,5 +101,81 @@ footer .container2 .dotted {
           flex: 1;
   height: 10px;
   border-bottom: 2px dotted #03bfcb;
+}
+
+@media all and (max-width: 768px) {
+  footer > div {
+    width: 100%;
+    padding: 15px 25px !important;
+    margin: 0 !important;
+  }
+  footer h2 {
+    margin: 0;
+  }
+  footer ul {
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .contact-details {
+    display: none;
+  }
+  .Image {
+    height: auto;
+  }
+  .Image .boxes .box {
+    width: 40%;
+    margin-bottom: 25px;
+  }
+  .boxes2 .box3 {
+    width: 40%;
+    margin-bottom: 25px;
+  }
+  .part1 {
+    padding: 0 25px;
+    margin: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .part1 .part1-1 {
+    margin: 0;
+  }
+  .part1 .part1-1 .slider {
+    width: 100%;
+  }
+  .fle {
+    padding: 25px;
+    margin: 0;
+  }
+  .fle .container {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+  .fle .img-area, .fle .content-area {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .backgr {
+    padding: 0 25px;
+  }
+  .backgr > div {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .fle .container, .Image .boxes .box, .boxes2 .box3 {
+    width: 100%;
+  }
+  .navbar .Logo .Info {
+    display: none;
+  }
+  .navbar .Logo .logo-img {
+    width: 100%;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=footer.css.map */

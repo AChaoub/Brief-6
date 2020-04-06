@@ -1,14 +1,10 @@
 @import "variables.scss";
 @import "header.scss";
-@import "footer.scss";
 @import "propreties.scss";
 form {
-  width: 50%;
-  margin: 0 auto;
+  margin: 8% 50px 5%;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   padding: 4%;
-  margin-top: 8%;
-  margin-bottom: 2%;
   label {
     font-size: $font-size4;
     font-family: $font;
@@ -45,3 +41,29 @@ form {
     width: 50%;
   }
 }
+
+@media all and (max-width: 425px) {
+  .fle-part1 > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  form {
+    margin-left: 25px;
+    margin-right: 25px;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    label {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@import "footer.scss";

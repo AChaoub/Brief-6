@@ -3,9 +3,18 @@ body {
   margin: 0;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   background-color: #004767;
-  height: 150px;
   font-family: Montserrat, sans serif;
   color: white;
   font-size: 14px;
@@ -18,6 +27,15 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 25px;
+}
+
+.navbar .Logo .logo-img {
+  width: 15%;
+}
+
+.navbar .Logo .logo-img img {
+  height: 80px;
 }
 
 .navbar .Logo .Info {
@@ -53,12 +71,13 @@ body {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  padding: 0 25px;
 }
 
 .navbar .Menu .list a {
   text-decoration: none;
   color: white;
-  padding: 0px 40px 0px 15px;
+  padding: 0px 15px;
   font-weight: 500;
 }
 
@@ -78,7 +97,7 @@ body {
 }
 
 .Image {
-  background-image: url(../Html/safi-at-night.jpg);
+  background-image: url(../images/safi-at-night.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 400px;
@@ -91,18 +110,20 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 20%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20% 25px 0;
   font-family: Montserrat, sans serif;
   font-size: 20px;
   font-weight: 600;
 }
 
 .Image .boxes .box {
-  width: 200px;
+  width: 20%;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   background-color: white;
-  margin-left: 3%;
+  margin: 0 2%;
   padding: 1% 2%;
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;

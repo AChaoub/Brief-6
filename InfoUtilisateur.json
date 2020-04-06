@@ -22,5 +22,13 @@
     "Birth": "2019-05-09",
     "Email": "Achraf.chaoub@gmail.com",
     "Password": "azertyui"
+  },
+  {
+    "Nom": "doe",
+    "Prenom": "john",
+    "Cin": "HH558764",
+    "Birth": "1990-01-01",
+    "Email": "john@doe.com",
+    "Password": "123456"
   }
 ]
